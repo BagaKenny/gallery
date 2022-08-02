@@ -3,10 +3,21 @@
     padding: 0;
 }
 
+@font-face {
+    font-family:'KENOKY';
+    src: url(./assets/KenokyLight-3zezL.ttf);
+}
+
+@font-face {
+    font-family: 'Neutral Face';
+    src: url(./assets/NeutralFace.otf);
+}
+
+
+
 body {
     background-color: #f0eed7;
     color: #161616;
-    overflow: hidden;
 }
 
 header {
@@ -20,11 +31,20 @@ header {
 }
 
 header .img img {
-    width: 60px;
+    width: 80px;
     padding: 0 20px;
     filter: invert(1);
+    animation: spinning 3s infinite linear;
 }
 
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 header .heading {
     font-family: "Neutral Face";
 }
@@ -32,6 +52,7 @@ header .heading {
 header .menu img {
     width: 35px;
     padding: 0 50px;
+    cursor: pointer;
 }
 
 .container {
@@ -65,3 +86,106 @@ header .menu img {
     border-left: 1px solid rgba(39, 39, 39, 0.281);
 }
 
+.top-section h1 {
+    font-size: 3rem;
+    font-family: 'Kenoky';
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #8f0000;
+}
+
+.top-section p {
+    padding: 0.5rem 0;
+    font-family: 'Neutral Face';
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    padding-left: 2px;
+}
+
+.inner-container .bottom-section {
+    font-size: 25rem;
+    margin-bottom: 50px;
+    font-family: 'KENOKY';
+    font-weight: lighter;
+    color: #8f0000;
+}
+
+.inner-container:hover .top-section h1 {
+    transition: color 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    color: white;
+}
+
+.inner-container:hover .top-section p {
+    transition: color 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    color: white;
+}
+
+.inner-container:hover .bottom-section {
+    transition: color 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    color: white;
+}
+
+.inner-container-1:hover{
+    background-image: url(./assets/px-Henri_Gervex__Rolla_.webp);
+}
+.inner-container-2:hover{
+    background-image: url(./assets/narcisse.webp);
+}
+.inner-container-3:hover{
+    background-image: url(./assets/meisje-met-de-parel.webp);
+}
+.inner-container-4:hover{
+    background-image: url(./assets/px-Apollo_of_the_Belvedere.webp);
+}
+
+
+
+@media screen and (max-width: 400px){
+
+    header {
+     color: #8f0000;
+    }
+
+
+    .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .menu img {
+        width: 50px;
+    }
+
+    .top-section h1 {
+        margin-top: 4rem;
+        font-size: 2.8rem;
+        color: #8f0000;
+    }
+
+
+    .top-section p {
+        color: #8f0000;
+    }
+
+    .inner-container-1{
+        background-image: url(./assets/px-Henri_Gervex__Rolla_.webp);
+        width: 20%;
+    }
+    .inner-container-2{
+        background-image: url(./assets/narcisse.webp);
+        width: 20%;
+    }
+    .inner-container-3{
+        background-image: url(./assets/meisje-met-de-parel.webp);
+        width: 20%;
+    }
+    .inner-container-4{
+        background-image: url(./assets/px-Apollo_of_the_Belvedere.webp);
+        width: 20%;
+    }
+    
+}
