@@ -1,16 +1,29 @@
-// const hamburgerBtn = document.querySelector('.nav-toggler')
-// const nav = document.querySelector('nav')
+const myButton = document.getElementById('myBtn');
 
-// /*hamburger.addEventListener('click', function(){
-//    hamburger.classList.toggle('active')
-// }); */
 
-// hamburgerBtn.addEventListener('click', showMenu);
+window.onscroll = function() {scrollFunction()};
 
-// function showMenu() { 
-// hamburgerBtn.classList.toggle('active');
-// nav.classList.toggle('active');
-// }
+//fade in scroll button
+
+function scrollFunction () {
+  if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150){
+    myButton.style.opacity = 100;
+  } else {
+    myButton.style.opacity = 0;
+  }
+}
+
+// when click scroll to top;
+
+function scrollToTop() {
+document.documentElement.scrollTo({
+top: 0,
+behavior: "smooth"
+})
+}
+//call function
+myButton.addEventListener("click", scrollToTop);
+
 
 const tl = new gsap.timeline();
 
