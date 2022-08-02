@@ -20,17 +20,71 @@
         <div class="heading">
             ART GALLERY
         </div>
-        <div class="menu">
-            <img src="menu.svg" alt="burger menu" id="menuBtn">
+        <div class="menu" onclick="menuOpen()">
+            <button type="button" aria-label="toggle curtain navigation" id="menuBtnDiv" class="nav-toggler">
+                <span class="line l1"></span>
+                <span class="line l2"></span>
+                <span class="line l3"></span>
+              </button>
         </div>
     </header>
+
+    <!-- Container -->
+    <div class="nav-container">
+        <div class="heading1"> <a href="#">Créatifs</a></div>
+        <div class="heading3"><a href="#">Web</a></div>
+        <div class="heading3"><a href="#">Art Sale</a></div>
+    </div>
+
+    <!-- menuOpen -->
+    <div class="menu-container">
+
+        <!-- Container 1 -->
+        <div class="menu-container-1">
+            <div></div>
+            <div class="menu-container-header">
+                <ul>
+                    <li><span>Nouveau Artistes</span></li>
+                    <li><span>À propos</span></li>
+                    <li><span>Contact</span></li>
+                </ul>
+            </div>
+
+            <div class="menu-container-footer">
+                <ul>
+                    <li id="latestWork">Derniers Travaux</li>
+                    <li><span>GPAH</span></li>
+                    <li><span>Arego</span></li>
+                    <li><span>Sizzer</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Container 2 -->
+        <div class="menu-container-2">
+            <div onclick="menuOpen()">
+                <button type="button" aria-label="toggle curtain navigation" id="menuBtnDiv2">
+                    <span class="line active l1 "></span>
+                    <span class="line active l2 "></span>
+                    <span class="line active l3 "></span>
+                  </button>
+            </div>
+            <div class="menu-container-footer">
+                <ul>
+                    <li><span> <a href="https://codepen.io/your-work" target="_blank">codepen</a> </span></li>
+                    <li><span> <a href="https://github.com/BagaKenny" target="_blank">github</a></span></li>
+                    <li><span> <a href="https://www.behance.net/kennybsga" target="_blank">Behance</a></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <main class="container">
         <div class="inner-container inner-container-1">
             <div class="inner-inner-container">
                 <div class="top-section">
                     <h1>
-                        Rolla <br>
-                        Par <br>
+                        Cher Rolla <br>
+                        De <br>
                         Gervex
                     </h1>
                     <p>MDCLIIX</p>
@@ -57,8 +111,8 @@
             <div class="inner-inner-container">
                 <div class="top-section">
                     <h1>
-                        La Fille à la perle <br>
-                        Par <br>
+                        Chef d'oeuvre <br>
+                        De <br>
                         Vermeer
                     </h1>
                     <p>MDCXVII</p>

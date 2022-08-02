@@ -49,6 +49,91 @@ header .heading {
     font-family: "Neutral Face";
 }
 
+/* Burger Menu */
+.nav-toggler{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 30px;
+    width: 50px; 
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+#menuBtnDiv2 {
+    position: absolute;
+    z-index: 100;
+    top: 6rem;
+    right: 30px;
+    width: 50px; 
+    border: none;
+    outline: none;
+    cursor: pointer;
+    animation: spinning 3s infinite linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#menuBtnDiv2 .l1 {
+    transform: translateY(0px) rotate(135deg);
+}
+#menuBtnDiv2.active .l2 {
+    opacity: 0;
+  }
+#menuBtnDiv2 .l3 {
+    transform: translateY(0px) rotate(-135deg);
+}
+#menuBtnDiv2 .line {
+    background: #ffffff;
+  }
+
+
+.line {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background: #000000;
+    height: 2px;
+    transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+  }
+
+.nav-toggler .l1 {
+    transform: translateY(-10px);
+  }
+  
+.nav-toggler .l3{
+    transform: translateY(10px);
+  }
+  /* Lorsqu'on clique dessus, on les tourne et les faire rotate et pour la bar du milieu on met l'opacité à 0*/
+  .nav-toggler.active .l1{
+    transform: translateY(0px) rotate(135deg);
+  }
+  .nav-toggler.active .l2 {
+    opacity: 0;
+  }
+  .nav-toggler.active .l3 {
+    transform: translateY(0px) rotate(-135deg);
+  }
+
+
+/* Header */
+
 header .menu img {
     width: 35px;
     padding: 0 50px;
@@ -187,5 +272,161 @@ header .menu img {
         background-image: url(./assets/px-Apollo_of_the_Belvedere.webp);
         width: 20%;
     }
+
+    /* Nav menu responsive */
+
+    .nav-container .heading1 a,
+    .nav-container .heading2 a,
+    .nav-container .heading3 a
+    {
+        font-size: 90px;
+    }
     
+    .menu-container {
+        flex-direction: column-reverse;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .menu-container .menu-container-1 {
+        width: 100%;
+       
+    }
+
+    .menu-container .menu-container-2 {
+        width: 100%;
+        padding: 10px;
+    }
 }
+
+
+/* Nav menu*/
+
+.menu-container-footer ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a {
+    color: #8f0000;
+}
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+
+.nav-container div {
+font-size: 300px;
+  line-height: 0.8;
+  font-family: "KENOKY";
+  font-weight: lighter;
+  color: #8f0000;
+}
+
+.heading1 {
+    margin-left: 11%;
+  }
+  .heading3 {
+    margin-left: 3%;
+  }
+
+  /* menu container */
+
+  .menu-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    font-family: "Neutral Face";
+  }
+
+  .menu-container .menu-container-1 {
+    width: 100%;
+    background-color: #010101;
+  }
+
+  .menu-container-1 {
+    display: flex;
+    padding: 10vh 5vw;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #8f0000;
+  }
+
+  .menu-container-1 .menu-container-header li {
+    font-size: 60px;
+    margin: 10px 0;
+    font-weight: bold;
+    overflow: hidden;
+  }
+
+  .menu-container-1 .menu-container-footer li {
+    font-size: 30px;
+    font-weight: lighter;
+    text-decoration: underline;
+    margin: 5px 0px;
+    overflow: hidden;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .menu-container .menu-container-2 {
+    width: 40vw;
+    background-color: #8f0000;
+  }
+
+  .menu-container-2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10vh 5vw;
+    color: #ffffff;
+  }
+
+  .menu-container-2 .menu-container-footer li {
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 5px 0px;
+    overflow: hidden;
+  }
+
+  #latestWork {
+    font-size: 20px;
+    text-decoration: none;
+    margin: 20px 2px;
+  }
+
+  .menu-container-header li span,
+.menu-container-footer li span {
+  display: block;
+  position: relative;
+}
+
+
+.menu-container-header li:hover span,
+.menu-container-footer li:hover span {
+  animation: MoveDown 0.3s forwards, MoveUp 0.2s forwards 0.2s;
+}
+
+@keyframes MoveDown {
+    to {
+      transform: translate3d(0, 105%, 0);
+    }
+  }
+  @keyframes MoveUp {
+    from {
+      transform: translate3d(0, -100%, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
